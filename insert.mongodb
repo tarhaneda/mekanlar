@@ -1,0 +1,33 @@
+const database = 'mekanbul';
+use(database);
+db.venues.insertOne(
+{
+   "name": "Hünkar Restoran",
+  "address": "Ordu/Fatsa",
+  "rating": 5,
+  "foodanddrink": [
+    "çay",
+    "lahmacun",
+    "pide"
+  ],
+  "coordinates": [
+    41.03442690746053,
+    37.4963952668592
+  ],
+  "hours": [
+    {
+      "days": "Pazartesi-Cuma",
+      "open": "9:00",
+      "close": "19:00",
+      "isClosed": false
+    },
+    {
+      "days": "Cumartesi-Pazar",
+      "open": "11:00",
+      "close": "21:00",
+      "isClosed": false
+    }
+  ]
+}
+
+ );
