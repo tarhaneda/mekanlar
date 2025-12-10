@@ -1,6 +1,6 @@
 var mongoose=require('mongoose');
 
-var dbURI ="mongodb://localhost/mekanbul";
+var dbURI =process.env.MONGO_URI ;
 
 mongoose.connect(dbURI);
 
