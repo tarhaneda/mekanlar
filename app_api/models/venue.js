@@ -4,7 +4,8 @@ var mongoose=require('mongoose');
 var hour=new mongoose.Schema({//alt şema
     day:{type:String,required:true},
     open:{type:String,required:true},
-    close:{type:String,required:true}
+    close:{type:String,required:true},
+    isCClosed:{type:Boolean,default:false}
 });
 var comment=new mongoose.Schema({//alt şema
     author:{type:String,required:true},
@@ -18,13 +19,14 @@ var venue=new mongoose.Schema({
     rating:{type:Number,default:0,min:0,max:5},
     foodanddrink:[String],//string dizisi
     coordinates:{
-        type:[Number],//number dizisi
+        type:[Number],
+        index:"2dsphere"//number dizisi
  
     },
     hours:[hour],//alt şema kullanımı
     comments:[comment]//alt şema kullanımı
 });
-mongoose.model('Venue',venue,"venues");//ilki döküman tanımı
+mongoose.model('venue',venue,"venues");//ilki döküman tanımı
 
 
 //hangisi en büyükse onun en altta olması lazım burda venue en büyük olduğu için en altta

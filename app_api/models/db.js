@@ -1,5 +1,7 @@
 var mongoose=require('mongoose');
-var dbURI='mongodb+srv://edanurtarhan:edanur5252@cluster0.vzigkek.mongodb.net/?appName=Cluster0';
+
+var dbURI ="mongodb://localhost/mekanbul";
+
 mongoose.connect(dbURI);
 
 mongoose.connection.on("connected",function(){//bağlandığında
