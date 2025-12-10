@@ -15,7 +15,7 @@ var comment=new mongoose.Schema({//alt şema
 });
 var venue=new mongoose.Schema({
     name:{type:String,required:true},
-    adress:{type:String,required:true},
+    address:{type:String,required:true},
     rating:{type:Number,default:0,min:0,max:5},
     foodanddrink:[String],//string dizisi
     coordinates:{
